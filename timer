@@ -1,0 +1,24 @@
+
+#action = false #dodać włącz wyłacz funkcję
+import time
+import os
+import ipywidgets
+
+start = time.localtime()
+time = time.strftime('%M')
+timeint = int(time)
+
+print(timeint)
+long = int(input('how long ',))
+timeover = long+timeint
+if timeover > 59:
+        timeover = long+timeint-60
+print(timeover)
+
+while timeover != timeint:
+    import time
+    a = time.strftime('%M')
+    timeint = int(a)
+    print(timeint)
+else:
+   os.system("shutdown /l")
